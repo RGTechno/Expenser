@@ -9,17 +9,44 @@
     <script src="/js/jquery-3.4.1.js"></script>
     <script src="/js/popper.js"></script>
     <script src="/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <div class="dropdown">
-            <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown">{{firstName}}</a>              
+        <a class="navbar-brand" href="#">Expenser</a>
+        <div class="dropdown ml-auto">
+            <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown">{{firstName}}</a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="/account/logout">Logout</a>
             </div>
         </div>
     </nav>
+
+    <a data-toggle="modal" data-target="#addTransaction"><i class="far fa-plus-square"></i></a>
+
+    <div class="modal fade" id="addTransaction" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Your Transaction</h5>
+                </div>
+                <div class="modal-body">
+                    <form action="/dashboard" method="POST">
+                        <div class="form-group">
+                            <label for="inpPrice">Price</label>
+                            <input type="number" class="form-control" name="inpPrice" id="inpPrice">
+                        </div>
+                        <div class="form-group">
+                            <label for="inpTitle">Give Your Transaction a Title</label>
+                            <input type="text" class="form-control" name="inpTitle" id="inpTitle">
+                        </div>
+                        <button type="submit" class="btn btn-info"><i class="fas fa-plus"></i> ADD</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
