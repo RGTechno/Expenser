@@ -12,19 +12,17 @@
 </head>
 
 <body>
-    <h1>Login</h1>
-    <form action="/account/login" method="POST">
+    <h1 class="text-center">Login</h1>
+    <form class="text-center border border-primary m-3 p-3" action="/account/login" method="POST">
         <div class="form-group">
             <label for="username">UserName</label>
-            <input type="text" class="form-control" name="username" id="username">
+            <input type="text" class="form-control text-center" name="username" id="username">
         </div>
-        <br><br>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" id="password">            
+            <input type="password" class="form-control text-center" name="password" id="password">            
         </div>
-        <br><br>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-info m-1">Login</button>
     </form>
 </body>
 
