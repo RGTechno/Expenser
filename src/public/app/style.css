@@ -1,0 +1,13 @@
+.carousel-item{
+    height: 500px;
+}
+
+.carousel-item img {
+    height: 500px;
+}
+
+.start {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}

@@ -20,7 +20,7 @@ route.post("/", async (req,res)=>{
         title : req.body.inpTitle,
         userId : req.user.id
     })  
-    return transaction  
+    return res.status(201).send(transaction)  
 })
 
 module.exports = {
