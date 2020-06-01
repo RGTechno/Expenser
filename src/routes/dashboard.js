@@ -3,9 +3,11 @@ const { Transactions } = require("../database/db")
 
 const route = Router()
 
-route.get("/",(req,res)=>{
+let multitransactions = []
+
+route.get("/", async (req,res)=>{
     if(req.user){
-        return res.render("dashboard",{firstName : req.user.firstName})
+        return res.render("dashboard",{firstName : req.user.firstName, multitransactions})
     }
     else{
         res.redirect("/account/login")
@@ -19,8 +21,8 @@ route.post("/", async (req,res)=>{
         price : req.body.inpPrice,
         title : req.body.inpTitle,
         userId : req.user.id
-    })  
-    return res.status(201).send(transaction)  
+    })
+    res.redirect("/dashboard")      
 })
 
 module.exports = {

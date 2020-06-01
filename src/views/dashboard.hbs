@@ -47,6 +47,13 @@
             </div>
         </div>
     </div>
+
+    <ul class="list-group">
+        {{#each multitransactions as |t|}}
+            <li class="list-group-item">{{t.price}}  {{t.title}}</li>
+        {{/each}}
+    </ul>
+
 </body>
 
 </html>
