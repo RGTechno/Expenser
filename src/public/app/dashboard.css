@@ -1,9 +1,15 @@
 #listprice {
-    width: 75%;
+    background-color: coral;
+    color: whitesmoke;
+    font-family: cursive;
+    font-style: italic;
 }
 
 #listtitle {
     font-size: 17pt;
+    font-family: cursive;
+    font-style: italic;
+    color: tomato;
 }
 
 #btnAdd {

@@ -3,8 +3,14 @@ $(() => {
         for (let t of transactions) {
             $("#ulexpense").append(
                 `<li class="list-group-item">
-                    <p class="font-weight-bolder border border-dark rounded-pill m-3 p-3" id="listprice">RS. ${t.price}/=</p>
-                    <p class="font-weight-bold m-3 p-3" id="listtitle">${t.title}</p>
+                    <div class="container m-1 p-1 col">
+                        <div class="row">
+                            <p class="font-weight-bolder border border-dark rounded-pill p-3 col-8" id="listprice">RS. ${t.price}/=</p>
+                        </div>
+                        <div class="row">
+                            <p class="font-weight-bold p-3 col" id="listtitle">${t.title}</p>
+                        </div>                    
+                    </div>
                 </li>`
             )
         }
