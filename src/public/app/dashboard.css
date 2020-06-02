@@ -1,0 +1,16 @@
+#listprice {
+    width: 75%;
+}
+
+#listtitle {
+    font-size: 17pt;
+}
+
+#btnAdd {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.menu {
+    margin-right: 65px;
+}

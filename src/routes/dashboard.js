@@ -3,28 +3,36 @@ const { Transactions } = require("../database/db")
 
 const route = Router()
 
-let multitransactions = []
-
-route.get("/", async (req,res)=>{
-    if(req.user){
-        return res.render("dashboard",{firstName : req.user.firstName, multitransactions})
+route.get("/", (req, res) => {
+    if (req.user) {
+        return res.render("dashboard", { firstName: req.user.firstName})
     }
-    else{
+    else {
         res.redirect("/account/login")
     }
 })
 
-route.post("/", async (req,res)=>{
+route.get("/transactions", async (req,res)=>{
+    if(req.user){
+        let transactions = await Transactions.findAll({where : {userId : req.user.id}})
+        return res.send(transactions)
+    }
+    else {
+        res.redirect("/account/login")
+    }
+})
+
+route.post("/", async (req, res) => {
 
     console.log(req.body)
     const transaction = await Transactions.create({
-        price : req.body.inpPrice,
-        title : req.body.inpTitle,
-        userId : req.user.id
+        price: req.body.inpPrice,
+        title: req.body.inpTitle,
+        userId: req.user.id
     })
-    res.redirect("/dashboard")      
+    res.redirect("/dashboard")
 })
 
 module.exports = {
-    dashboardRoute : route
+    dashboardRoute: route
 }

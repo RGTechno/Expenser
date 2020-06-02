@@ -1,9 +1,15 @@
 .carousel-item{
-    height: 500px;
+    height: 600px;
+    font-size: 30pt;
+    font-family: cursive;
+}
+
+h5 {
+    font-size: 40pt;
 }
 
 .carousel-item img {
-    height: 500px;
+    height: 600px;
 }
 
 .start {
