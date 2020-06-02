@@ -1,5 +1,5 @@
 const { Router } = require("express")
-const { Users } = require("../database/db")
+const { createuser } = require("../controllers/signup")
 
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -10,15 +10,10 @@ route.get("/",(req,res)=>{
     res.render("signup")
 })
 
-route.post("/", (req, res) => {
+route.post("/", async (req, res) => {
     // bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
-        let user = Users.create({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            username: req.body.username,
-            password: req.body.password
-        })
+        const {firstName,lastName,email,username,password} = req.body
+        let user = await createuser(firstName,lastName,email,username,password)
         if (user) {
             res.redirect("login")
         }

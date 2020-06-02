@@ -12,5 +12,9 @@
     right: 50px;
 }
 .menu {
-    margin-right: 65px;
+    margin-right: 10px;
+}
+
+.dropmenu {
+    cursor: pointer;
 }

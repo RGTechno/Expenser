@@ -8,5 +8,8 @@ $(() => {
                 </li>`
             )
         }
+        $(".expense").append(
+            `Total Spent : ${totalexpense}`
+        )
     })
 })
