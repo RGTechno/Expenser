@@ -2,6 +2,8 @@ const passport = require("passport")
 const localStrategy = require("passport-local")
 const { Users } = require("./database/db")
 
+const { comparepass } = require("./hashing")
+
 passport.serializeUser(function (user, done) {
     done(null, user.username)
 })
@@ -23,14 +25,18 @@ passport.deserializeUser(function (username, done) {
 passport.use(new localStrategy(function (username, password, done) {
     Users.findOne({
         where: { username: username },
-    }).then((user) => {
+    }).then(async (user) => {
         if (!user) {
             return done(null, false, { message: "NO such User" })
         }
-        if (user.password !== password) {
+        const match = await comparepass(password,user.password)
+        if(match){
+            return done(null, user)
+        }
+        else{
             return done(null, false, { message: "Incorrect Password" })
         }
-        return done(null, user)
+        
     }).catch((err) => {
         done(err)
     })
