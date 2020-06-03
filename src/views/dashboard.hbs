@@ -17,12 +17,11 @@
 
 <body>
     <nav class="navbar sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="/dashboard">Expenser</a>        
+        <a class="navbar-brand font-weight-bold" href="/dashboard">Expenser</a>
+        <a class="text-white" href="/profile">Profile</a>
         <div class="dropdown dropleft ml-auto menu">
             <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown">{{firstName}}</a>
             <div class="dropdown-menu dropmenu text-center">
-                <a class="dropdown-item" href="/profile">profile</a>
-                <hr>
                 <a data-toggle="modal" data-target="#addTransaction" class="m-1 p-1 expense">Add Transaction <i
                         class="far fa-plus-square"></i></a>
                 <a class="dropdown-item" href="/account/logout">Logout</a>

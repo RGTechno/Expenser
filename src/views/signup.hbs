@@ -14,8 +14,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Expenser</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand font-weight-bolder" href="/">Expenser</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Why Use Expenser</a>
+                </li>
+            </ul>
+            <a href="/account/login"><button class="btn btn-info rounded-pill m-1">Login</button></a>
+        </div>
     </nav>
     <div class="container signup rounded-lg">
         <h1 class="text-center text-danger font-weight-bold font-italic"><u>Signup</u></h1>
@@ -40,7 +58,7 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control text-center" name="password" id="password">
             </div>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-info rounded-pill">Submit</button>
         </form>
     </div>
 </body>

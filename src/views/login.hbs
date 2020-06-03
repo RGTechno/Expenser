@@ -13,9 +13,27 @@
     <link rel="stylesheet" href="/app/style.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Expenser</a>
+<body class="loginbody">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand font-weight-bolder" href="/">Expenser</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Why Use Expenser</a>
+                </li>
+            </ul>
+            <a href="/account/signup"><button class="btn btn-info rounded-pill m-1">Signup</button></a>
+        </div>
     </nav>
     <div class="container login rounded-lg">
         <h1 class="text-center text-danger font-weight-bold font-italic"><u>Login</u></h1>
@@ -28,9 +46,9 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control text-center" name="password" id="password">
             </div>
-            <button type="submit" class="btn btn-info m-1">Login</button>
+            <button type="submit" class="btn btn-info m-1 rounded-pill">Login</button>
             OR
-            <a href="/account/signup"><button type="button" class="btn btn-info m-1">Signup</button></a>
+            <a href="/account/signup"><button type="button" class="btn btn-info m-1 rounded-pill">Signup</button></a>
         </form>
     </div>
 </body>

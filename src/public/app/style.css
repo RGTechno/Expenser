@@ -1,5 +1,5 @@
 .carousel-item{
-    height: 600px;
+    height: 550px;
     font-size: 30pt;
     font-family: cursive;
 }
@@ -9,7 +9,7 @@ h5 {
 }
 
 .carousel-item img {
-    height: 600px;
+    height: 550px;
 }
 
 .start {
@@ -25,9 +25,8 @@ h5 {
 
 .login {
     background-color: lavenderblush;
-    justify-content: center;
     margin-top: 50px;
-    padding: 30px;    
+    padding: 30px;  
 }
 
 .signup {
