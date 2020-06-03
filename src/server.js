@@ -4,6 +4,7 @@ const { passport } = require("./passport")
 const { db } = require("./database/db")
 const { indexRoute } = require("./routes/index")
 const { dashboardRoute } = require("./routes/dashboard")
+const { profileRoute } = require("./routes/profile")
 
 const app = express()
 
@@ -22,6 +23,7 @@ app.use(passport.session())
 
 app.use("/account",indexRoute)
 app.use("/dashboard",dashboardRoute)
+app.use("/profile",profileRoute)
 
 db.sync()
     .then(() => {

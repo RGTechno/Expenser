@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand font-weight-bolder" href="/dashboard">Expenser</a>
+        <a class="text-white" href="/dashboard">Dashboard</a>
+        <div class="dropdown dropleft ml-auto menu">
+            <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown">{{firstName}}</a>
+            <div class="dropdown-menu dropmenu text-center">
+                <a class="dropdown-item" href="/account/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <table class="container table table-striped table-dark mt-5 rounded-lg">
+        <tbody>
+            <tr>
+                <td>FirstName</td>
+                <td>{{firstName}}</td>
+            </tr>
+            <tr>
+                <td>LastName</td>
+                <td>{{lastName}}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{email}}</td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>{{username}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
