@@ -7,7 +7,7 @@ const saltRounds = 10;
 const route = Router()
 
 route.get("/", (req, res) => {
-    res.render("signup")
+    res.render("signup", {title : "Expenser Signup"})
 })
 
 route.post("/", async (req, res) => {

@@ -9,7 +9,7 @@ const saltRounds = 10;
 const route = Router()
 
 route.get("/",(req,res)=>{
-    res.render("login")
+    res.render("login", {title : "Expenser Login"})
 })
 
 route.post("/", passport.authenticate("local",{

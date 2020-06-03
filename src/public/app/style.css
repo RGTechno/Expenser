@@ -22,3 +22,17 @@ h5 {
     position: sticky;
     bottom: 0px;
 }
+
+.login {
+    background-color: lavenderblush;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 30px;    
+}
+
+.signup {
+    background-color: lavenderblush;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 30px;    
+}

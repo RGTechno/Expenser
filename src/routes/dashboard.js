@@ -5,7 +5,7 @@ const route = Router()
 
 route.get("/", (req, res) => {
     if (req.user) {
-        return res.render("dashboard", { firstName: req.user.firstName})
+        return res.render("dashboard", { firstName: req.user.firstName , page : "Dashboard"})
     }
     else {
         res.redirect("/account/login")

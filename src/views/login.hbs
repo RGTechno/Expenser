@@ -4,31 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <script src="/js/jquery-3.4.1.js"></script>
     <script src="/js/popper.js"></script>
     <script src="/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="/app/style.css">
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Expenser</a>
     </nav>
-    <h1 class="text-center">Login</h1>
-    <form class="text-center border border-primary m-3 p-3" action="/account/login" method="POST">
-        <div class="form-group">
-            <label for="username">UserName</label>
-            <input type="text" class="form-control text-center" name="username" id="username">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control text-center" name="password" id="password">           
-        </div>
-        <button type="submit" class="btn btn-info m-1">Login</button>
-        OR
-        <a href="/account/signup"><button type="button" class="btn btn-info m-1">Signup</button></a>
-    </form>
+    <div class="container login rounded-lg">
+        <h1 class="text-center text-danger font-weight-bold font-italic"><u>Login</u></h1>
+        <form class="m-3 p-3" action="/account/login" method="POST">
+            <div class="form-group">
+                <label for="username">UserName</label>
+                <input type="text" class="form-control text-center" name="username" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control text-center" name="password" id="password">
+            </div>
+            <button type="submit" class="btn btn-info m-1">Login</button>
+            OR
+            <a href="/account/signup"><button type="button" class="btn btn-info m-1">Signup</button></a>
+        </form>
+    </div>
 </body>
 
 </html>
