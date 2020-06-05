@@ -1,7 +1,7 @@
 #aboutBanner{
     background-color: #343a40;
     margin: 30px 30px 30px 0px;
-    padding: 25px 25px 25px 5px;
+    padding: 25px 25px 25px 8px;
     width: 80%;
 }
 
@@ -26,6 +26,6 @@
 #aboutend{
     background-color: #343a40;
     margin: 20px 20px 20px 0px;
-    padding: 15px 15px 15px 5px;
+    padding: 20px 15px 15px 10px;
     width: 80%;
 }
