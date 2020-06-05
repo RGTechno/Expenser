@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>{{title}} > Expenser</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <script src="/js/jquery-3.4.1.js"></script>
     <script src="/js/popper.js"></script>
@@ -26,10 +26,10 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/components/about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Why Use Expenser</a>
+                    <a class="nav-link" href="/components/whyExpenser.html">Why Use Expenser</a>
                 </li>
             </ul>
             <a href="/account/signup"><button class="btn btn-info rounded-pill m-1">Signup</button></a>
@@ -40,11 +40,11 @@
         <form class="m-3 p-3" action="/account/login" method="POST">
             <div class="form-group">
                 <label for="username">UserName</label>
-                <input type="text" class="form-control text-center" name="username" id="username">
+                <input type="text" class="form-control text-center" name="username" id="username" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control text-center" name="password" id="password">
+                <input type="password" class="form-control text-center" name="password" id="password" required>
             </div>
             <button type="submit" class="btn btn-info m-1 rounded-pill">Login</button>
             OR

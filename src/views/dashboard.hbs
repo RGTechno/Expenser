@@ -11,24 +11,45 @@
     <script src="/js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 
-    <script src="/app/dashboard.js"></script>
+    <script defer src="/app/dashboard.js"></script>
     <link rel="stylesheet" href="/app/dashboard.css">
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand font-weight-bold" href="/dashboard">Expenser</a>
-        <a class="text-white" href="/profile">Profile</a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand font-weight-bolder" href="/">Expenser</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/components/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/components/whyExpenser.html">Why Use Expenser</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+        <p class="text-white m-1">Build Your Expense Memo In A Few Seconds</p>
         <div class="dropdown dropleft ml-auto menu">
             <a class="btn btn-danger dropdown-toggle" href="#" data-toggle="dropdown">{{firstName}}</a>
             <div class="dropdown-menu dropmenu text-center">
-                <a data-toggle="modal" data-target="#addTransaction" class="m-1 p-1 expense">Add Transaction <i
+                <a data-toggle="modal" data-target="#addTransaction" class="m-1 p-1 expense text-dark">Add Transaction <i
                         class="far fa-plus-square"></i></a>
-                <a class="dropdown-item" href="/account/logout">Logout</a>
+                <a class="text-dark" href="/account/logout">Logout</a>
             </div>
         </div>
     </nav>
-
     <div class="modal fade" id="addTransaction" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

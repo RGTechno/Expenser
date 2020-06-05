@@ -18,7 +18,7 @@ $(() => {
         }
         $(".expense").append(
             `<hr>
-            <p class="m-1 p-1">Total Spent : ${totalexpense}</p>
+            <p class="m-1 p-1 text-dark">Total Spent : ${totalexpense}</p>
             <hr>`
         )        
     })    

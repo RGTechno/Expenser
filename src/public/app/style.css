@@ -18,11 +18,6 @@ h5 {
     justify-content: center;
 }
 
-#footer{
-    position: sticky;
-    bottom: 0px;
-}
-
 .login {
     background-color: lavenderblush;
     margin-top: 50px;
