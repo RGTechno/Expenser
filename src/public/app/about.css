@@ -1,31 +1,37 @@
 #aboutBanner{
     background-color: #343a40;
-    margin: 30px 30px 30px 0px;
-    padding: 25px 25px 25px 8px;
+    margin: 15px;
+    padding: 10px;
     width: 80%;
+    text-align: center;
 }
 
 #intro {
     color: whitesmoke;
-    font-size: 35pt;
-    font-family: cursive;
+    font-size: 30pt;
 }
 
 #aboutContent {
-    background-color: bisque;
-    margin: 30px 0px 30px 80px;
-    padding: 25px 25px 25px 5px;
+    margin: 15px;
+    padding: 15px;
 }
 
 #creator {
     text-align: center;
-    font-family: cursive;
     font-size: 28pt;
 }
 
 #aboutend{
+    margin: 15px;
+    padding: 25px;
     background-color: #343a40;
-    margin: 20px 20px 20px 0px;
-    padding: 20px 15px 15px 10px;
     width: 80%;
+}
+
+.container {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
