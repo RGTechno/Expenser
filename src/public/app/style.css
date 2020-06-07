@@ -19,14 +19,10 @@ h5 {
 }
 
 .login {
-    background-color: lavenderblush;
-    margin-top: 50px;
-    padding: 30px;  
+    padding: 10px; 
+    background-image: url("/utils/bgimg.png"); 
 }
 
 .signup {
-    background-color: lavenderblush;
-    justify-content: center;
-    margin-top: 50px;
-    padding: 30px;    
+    padding: 10px;  
 }

@@ -16,7 +16,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand font-weight-bolder" href="/">
-            <img src="/utils/logo.png" width="35" height="35" class="d-inline-block align-top" alt="logo" loading="lazy">Expenser
+            <img src="/utils/logo.png" width="35" height="35" class="d-inline-block align-top" alt="logo"
+                loading="lazy">Expenser
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
@@ -37,32 +38,52 @@
             <a href="/account/login"><button class="btn btn-info rounded-pill m-1">Login</button></a>
         </div>
     </nav>
-    <div class="container signup rounded-lg">
-        <h1 class="text-center text-danger font-weight-bold font-italic"><u>Signup</u></h1>
-        <form class="m-3 p-3" action="/account/signup" method="POST">
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" class="form-control text-center" name="firstName" id="firstName" required>
+    <div class="col">
+        <div class="row">
+            <div class="card signup rounded-lg col-sm-12 col-md-6">
+                <h1 class="text-center card-header text-danger font-weight-bold font-italic"><u>Signup</u></h1>
+                <form class="m-3 p-3 card-body" action="/account/signup" method="POST">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control text-center rounded-pill" name="firstName" id="firstName"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control text-center rounded-pill" name="lastName" id="lastName"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email-ID</label>
+                        <input type="email" class="form-control text-center rounded-pill" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">UserName</label>
+                        <input type="text" class="form-control text-center rounded-pill" name="username" id="username"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control text-center rounded-pill" name="password"
+                            id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-info rounded-pill">Submit</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" class="form-control text-center" name="lastName" id="lastName" required>
+            <div style="display: flex; justify-content:center">
+                <div class="text-monospace card font-italic card m-3 p-3 bg-secondary text-center rounded-lg">
+                    <h3 class="card-title">Why Should You Signup</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Saves Time => No need to find bills to track every expense</li>
+                        <li class="list-group-item">Analyses Your Transactions in form of Graphs and Charts</li>
+                        <li class="list-group-item">Builds Automated Budget based on your Spendings</li>
+                        <li class="list-group-item">You've got yourself a free Accountant</li>
+                    </ul>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email-ID</label>
-                <input type="email" class="form-control text-center" name="email" id="email">
-            </div>
-            <div class="form-group">
-                <label for="username">UserName</label>
-                <input type="text" class="form-control text-center" name="username" id="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control text-center" name="password" id="password" required>
-            </div>
-            <button type="submit" class="btn btn-info rounded-pill">Submit</button>
-        </form>
+        </div>
     </div>
+
 </body>
 
 </html>
