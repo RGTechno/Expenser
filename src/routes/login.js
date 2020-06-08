@@ -1,10 +1,6 @@
 const { Router } = require("express")
-const { Users } = require("../database/db")
 
 const { passport } = require("../passport")
-
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
 
 const route = Router()
 
