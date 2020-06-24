@@ -8,6 +8,8 @@ const { profileRoute } = require("./routes/profile")
 
 const app = express()
 
+const PORT = process.env.PORT || 5555
+
 app.set("view engine", "hbs")
 
 app.use("/",express.static(__dirname + "/public"))
@@ -27,8 +29,8 @@ app.use("/profile",profileRoute)
 
 db.sync()
     .then(() => {
-        app.listen(3333, () => {
-            console.log("Server Started on http://localhost:3333")
+        app.listen(PORT, () => {
+            console.log(`Server Started on http://localhost:${PORT}`)
         })
     })
     .catch(() => {
