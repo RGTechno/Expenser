@@ -1,0 +1,23 @@
+#listprice {
+    background-color: coral;
+    color: whitesmoke;
+    font-family: cursive;
+    font-style: italic;
+}
+
+#listtitle {
+    font-size: 17pt;
+    font-family: cursive;
+    font-style: italic;
+    color: tomato;
+}
+
+#btnAdd {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.dropmenu {
+    cursor: pointer;
+}

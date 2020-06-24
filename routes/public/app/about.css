@@ -1,0 +1,37 @@
+#aboutBanner{
+    background-color: #343a40;
+    margin: 15px;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+#intro {
+    color: whitesmoke;
+    font-size: 30pt;
+}
+
+#aboutContent {
+    margin: 15px;
+    padding: 15px;
+}
+
+#creator {
+    text-align: center;
+    font-size: 28pt;
+}
+
+#aboutend{
+    margin: 15px;
+    padding: 25px;
+    background-color: #343a40;
+    width: 80%;
+}
+
+.container {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
