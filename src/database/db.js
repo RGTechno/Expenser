@@ -1,56 +1,63 @@
 const Sequelize = require("sequelize")
 
-const db = new Sequelize({
-    dialect : "mysql",
-    database : "expense_manager",
-    username : "expense_client",
-    password : "clientpass",
-})
+let db;
 
-const Users = db.define("user",{
-    id : {
-        type : Sequelize.DataTypes.INTEGER,
-        primaryKey : true,
-        autoIncrement : true
-    },    
-    firstName : {
-        type : Sequelize.DataTypes.STRING,
-        allowNull : false,
+if (process.env.DATABASE_URL) {
+    db = new Sequelize(process.env.DATABASE_URL)
+}
+else {
+    db = new Sequelize({
+        dialect: "mysql",
+        database: "expense_manager",
+        username: "expense_client",
+        password: "clientpass",
+    })
+}
+
+const Users = db.define("user", {
+    id: {
+        type: Sequelize.DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
     },
-    lastName : {
-        type : Sequelize.DataTypes.STRING
-    },
-    email : {
+    firstName: {
         type: Sequelize.DataTypes.STRING,
-        validate : {
-            isEmail : true
+        allowNull: false,
+    },
+    lastName: {
+        type: Sequelize.DataTypes.STRING
+    },
+    email: {
+        type: Sequelize.DataTypes.STRING,
+        validate: {
+            isEmail: true
         }
     },
-    username : {
-        type : Sequelize.DataTypes.STRING,
-        allowNull : false,
-        unique : true
+    username: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+        unique: true
     },
-    password : {
-        type : Sequelize.DataTypes.STRING,
-        allowNull : false,
+    password: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
     }
-    
+
 })
 
-const Transactions = db.define("transaction",{
-    id : {
-        type : Sequelize.DataTypes.INTEGER,
-        primaryKey : true,
-        autoIncrement : true
+const Transactions = db.define("transaction", {
+    id: {
+        type: Sequelize.DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
     },
-    price : {
-        type : Sequelize.DataTypes.FLOAT,
-        allowNull : false
+    price: {
+        type: Sequelize.DataTypes.FLOAT,
+        allowNull: false
     },
-    title : {
-        type : Sequelize.DataTypes.STRING,
-        allowNull : false
+    title: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false
     }
 })
 
@@ -58,5 +65,5 @@ Users.hasMany(Transactions)
 Transactions.belongsTo(Users)
 
 module.exports = {
-    db,Users,Transactions
+    db, Users, Transactions
 }
